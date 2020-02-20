@@ -1,0 +1,20 @@
+.Comment {
+    margin-bottom: 1.5rem;
+    padding: 20px;
+    background: rgb(245, 244, 244);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.DeleteButton {
+    padding: 2px!important;
+    font-size: xx-small!important;
+}
+
+.TranslateButton {
+    background: white!important;
+    border: 1px solid black!important;
+}
