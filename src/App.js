@@ -1,18 +1,22 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
-import CommentSection from './components/DisplayComments/DisplayComments'
+import CommentSection from './components/CommentSection/CommentSection'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  // get speak language options here
+
+
   return (
     <div className="App">
-      <header className="App-header display-2 bg-light text-dark mb-4">
+      <header className="App-header display-2 bg-light mb-4">
         Translation Blog
       </header>
       <main>
-        <h1 className="m-4 p-3 bg-dark"><a className="text-white" href="https://rapidapi.com/blog/google-translate-api-tutorial/">How To Build Support for Language Translating In Web Forms (Google Translate API Tutorial) [JavaScript]</a></h1>
+        <h1 className="m-4 p-3 text-center bg-light"><a className="heading-link" href="https://rapidapi.com/blog/google-translate-api-tutorial/">How To Build Support for Language Translating In Web Forms (Google Translate API Tutorial) [JavaScript]</a></h1>
         <article>
           <Container fluid>
             <Row className="justify-content-center">

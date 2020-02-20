@@ -3,18 +3,14 @@ import { Form, Button } from 'react-bootstrap'
 
 const AddComment = (props) => {
     let [comment, setComment] = useState('')
+    let [name, setName] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        props.db.collection('blogComments').insertOne({
-            owner_id: props.client.auth.user.id,
-            text: comment
-        })
-        .then(() => {
-            setComment('')
-            props.update()
-        })
+        const id = Number(Math.random().toString().substring(2));
+        props.add(id, comment, name)
+        setComment('')
+        setName('')
     }
 
     return (
@@ -26,8 +22,18 @@ const AddComment = (props) => {
                     <Form.Control
                         as='textarea'
                         value={comment}
+                        required
                         onChange={(e) => setComment(e.target.value)}
                         placeholder='Enter new comment here..'
+                        />
+                </Form.Group>
+                <Form.Group controlId="name">
+                    <Form.Label><b>Name</b></Form.Label>
+                    <Form.Control
+                        as='input'
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder='Enter Display Name Here'
                         />
                 </Form.Group>
                 <Button variant="primary" type="submit">
